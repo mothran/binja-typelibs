@@ -42,6 +42,11 @@ def main():
                 print("Skipping PPC64, not currently finished in core")
                 continue
 
+            if "archs" in typelib_desc:
+                if not platform.arch.name in typelib_desc["archs"]:
+                    print(f"Skipping arch {platform.arch.name}, typelib does not support it")
+                    continue
+
             platform_dir = os.path.join(typelib_path, platform.name)
             if not os.path.exists(platform_dir):
                 os.mkdir(platform_dir)

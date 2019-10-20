@@ -37,7 +37,9 @@ def main(args):
             prepend_str += f"#define {defintion} 1\n"
         type_data = "%s%s" % (prepend_str, type_data)
 
-    type_res = platform.parse_types_from_source(type_data, filename=args.input_file)
+    types_path = [os.path.dirname(os.path.realpath(args.input_file))]
+
+    type_res = platform.parse_types_from_source(type_data, filename=args.input_file, include_dirs=types_path)
 
     cur_typelib: TypeLibrary = TypeLibrary.new(Architecture[platform.arch.name], args.name)
 
