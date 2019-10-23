@@ -14,7 +14,7 @@ from binaryninja.log import log_info, log_warn, log_error, log_debug
 
 # TODO: fix the create-typelib script to stop it from loading this plugin
 if core_ui_enabled():
-    typelib_path = os.path.join(user_plugin_path(), "binja-types", "typelib")
+    typelib_path = os.path.join(user_plugin_path(), "binja-typelibs", "typelib")
 
     for platform_name in os.listdir(typelib_path):
         cur_platform = Platform[platform_name]
@@ -67,6 +67,6 @@ class FixPltTypes(BackgroundTaskThread):
 def run_plugin(bv: BinaryView):
     FixPltTypes(bv).start()
 
-PluginCommand.register("binja-types",
+PluginCommand.register("binja-typelibs",
                        "Fix function types missed by typelib",
                         run_plugin)

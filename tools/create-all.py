@@ -27,7 +27,7 @@ TYPELIBS = [
 
 
 def main():
-    plugin_path = os.path.join(user_plugin_path(), "binja-types")
+    plugin_path = os.path.join(user_plugin_path(), "binja-typelibs")
     typelib_path = os.path.join(plugin_path, "typelib")
     types_path = os.path.join(plugin_path, "types")
 
