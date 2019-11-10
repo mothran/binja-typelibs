@@ -29,6 +29,13 @@ TYPELIBS = [
         "name": "libcrypt.so",
         "alt_names": "libcrypt.so.0,libcrypt.so.1",
         "os": "linux"
+    },
+    {
+        "input_file": "libssl.h",
+        "output_file": "libssl.bntl",
+        "name": "libssl.so",
+        "alt_names": "libssl.so.1.1,libssl.so.1.0.0",
+        "os": "linux"
     }
 ]
 
