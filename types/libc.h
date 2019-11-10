@@ -302,7 +302,6 @@ size_t __mbstowcs_chk(wchar_t *dest, const char *src, size_t n);
 size_t wcstombs(char *dest, const wchar_t *src, size_t n);
 size_t __wcstombs_chk(char *dest, const wchar_t *src, size_t n);
 
-void setkey(const char *key);
 long int random(void);
 void srandom(unsigned int seed);
 char *initstate(unsigned int seed, char *state, size_t n);
@@ -439,7 +438,6 @@ char *ctermid(char *s);
 char *cuserid(char *string);
 int dup(int fildes);
 int dup2(int fildes, int fildes2);
-void encrypt(char block[64], int edflag);
 
 int execve(const char *pathname, char *const argv[], char *const envp[]);
 int fexecve(int fd, char *const argv[], char *const envp[]);

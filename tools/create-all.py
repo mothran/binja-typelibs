@@ -13,14 +13,21 @@ TYPELIBS = [
         "input_file": "libc.h",
         "output_file": "libc.bntl",
         "name": "libc.so",
-        "alt_names": "libc.so.6",
+        "alt_names": "libc.so.6,libc.so.0",
         "os": "linux"
     },
     {
         "input_file": "libdl.h",
         "output_file": "libdl.bntl",
         "name": "libdl.so",
-        "alt_names": "libdl.so.2",
+        "alt_names": "libdl.so.2,libdl.so.0",
+        "os": "linux"
+    },
+    {
+        "input_file": "libcrypt.h",
+        "output_file": "libcrypt.bntl",
+        "name": "libcrypt.so",
+        "alt_names": "libcrypt.so.0,libcrypt.so.1",
         "os": "linux"
     }
 ]
