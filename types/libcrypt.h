@@ -1,5 +1,5 @@
 struct crypt_data {
-    char keysched[16 * 8];
+    char keysched[128];
     char sb0[32768];
     char sb1[32768];
     char sb2[32768];
